@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #b92b27; /* fallback for old browsers */
+  background: linear-gradient(-45deg, #c33764 0%, #5a55ae 13%, #1d2671 25%, #8f6aae 38%, #a86aa4 50%, #3a1c71 62%, #d76d77 75%, #f3a469 87%, #f7c978 100%);
+  height: 100vh;
+  animation: gradient 20s infinite linear;
+  background-size:  400% 400%;
+}
+.wapper {
+  padding: 0 15px;
+}
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  color: #fff;
+  &__avatar {
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__desc {
+    text-align: center;
+    h1 {
+      margin-bottom: 5px;
+    }
+    p {
+      margin: 0 0 1.5rem 0;
+    }
+  }
+  &__link {
+    width: 100%;
+    ul {
+      width: 100%;
+      padding: 0;
+      li {
+        width: 100%;
+        margin-bottom: 1rem;
+        list-style: none;
+        a {
+          overflow: hidden;
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          border: 1px solid #fff;
+          text-decoration: none;
+          color: #fff;
+          padding: 10px 0;
+          text-align: center;
+          border-radius: 5px;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: transform .5s ;
+            z-index: -1;
+            transform:scaleX(0);
+            transform-origin: center right;
+          }
+          i {
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            transform: translateY(-50%);
+            
+            
+          }
+          &:hover:after {
+            transform:scaleX(1);
+            transform-origin: center left;
+            transition: transform .5s ;
+          }
+        }
+        a.phone:after {
+          background-color: #006c54;
+        }
+        a.email:after {
+          background-color: #dd4b39;
+        }
+        a.facebook:after {
+          background-color: #3b5998;
+        }
+        a.instargam:after {
+          background-color: #e1306c;
+        }
+
+        a.github:after {
+          background-color: #333;
+        }
+      }
+    }
+  }
+}
+@keyframes gradient {
+    0% {
+      background-position: 0%;
+    }
+  
+    100% {
+      background-position: 100%;
+    }
+  }
