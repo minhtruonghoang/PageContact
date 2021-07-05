@@ -10,12 +10,13 @@ body {
 }
 .wapper {
   padding: 0 15px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  
   width: 300px;
   color: #fff;
   &__avatar {
